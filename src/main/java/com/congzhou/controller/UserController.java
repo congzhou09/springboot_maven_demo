@@ -28,6 +28,11 @@ public class UserController {
         return "Here is the info about users.";
     }
 
+    @GetMapping(path = "/say")
+    public String say(){
+        return userService.say();
+    }
+
     @GetMapping(path = "/getList")
     public Result<List<User>> getUserList(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("application/json;charset=UTF-8");

@@ -5,6 +5,6 @@ import com.congzhou.model.User;
 import java.util.List;
 
 public interface UserService {
-    public void say();
-    public List<User> getList();
+    String say();
+    List<User> getList();
 }

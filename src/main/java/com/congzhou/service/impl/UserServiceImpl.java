@@ -22,8 +22,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void say(){
-        System.out.println("hey yeah");
+    public String say(){
+        String sayContent = "hey yeah";
+        System.out.println(sayContent);
+        return sayContent;
     }
 
     @Override
