@@ -5,26 +5,20 @@ import com.congzhou.model.User;
 import com.congzhou.service.UserService;
 import com.congzhou.util.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+@Service
 public class UserServiceImpl implements UserService {
     private UserDao userDao;
     private Logger logger;
 
+    // 统一使用基于构造函数方法注入bean，否则易出现使用时值为null的情况
     @Autowired
-    public UserServiceImpl(Logger logger) {
-        this.logger = logger;
-    }
-
-//    Spring的DI有两种方式：基于构造函数或基于setter方法，配置文件中对应<constructor-arg>和<property>标签，两种方式可以混用
-
-//    public UserServiceImpl(UserDao userDao) {
-//        this.userDao = userDao;
-//    }
-    public void setUserDao(UserDao userDao){
+    public UserServiceImpl(UserDao userDao, Logger logger) {
         this.userDao = userDao;
+        this.logger = logger;
     }
 
     @Override

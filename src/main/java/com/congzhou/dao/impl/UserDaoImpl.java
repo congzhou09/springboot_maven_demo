@@ -2,11 +2,13 @@ package com.congzhou.dao.impl;
 
 import com.congzhou.dao.UserDao;
 import com.congzhou.model.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Repository
 public class UserDaoImpl implements UserDao {
     @Override
     public List<User> getList() {
