@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface UserService {
     String say();
-    List<User> getList();
+    List<User> getList() throws Exception;
 }

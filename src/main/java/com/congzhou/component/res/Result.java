@@ -5,6 +5,11 @@ public class Result<T> {
     private String msg;
     private T data;
 
+    public Result(ResultCodeMessage resultCodeMessage){
+        this.code = resultCodeMessage.getCode();
+        this.msg = resultCodeMessage.getMessage();
+    }
+
     public Result(ResultCodeMessage resultCodeMessage, T data){
         this.code = resultCodeMessage.getCode();
         this.msg = resultCodeMessage.getMessage();

@@ -34,7 +34,7 @@ public class UserController {
     }
 
     @GetMapping(path = "/getList")
-    public Result<List<User>> getUserList(HttpServletRequest request, HttpServletResponse response) {
+    public Result<List<User>> getUserList(HttpServletRequest request, HttpServletResponse response) throws Exception{
         response.setContentType("application/json;charset=UTF-8");
         return new Result<List<User>>(ResultCodeMessage.SUCCESS, userService.getList());
     }

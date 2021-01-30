@@ -7,16 +7,16 @@ import javax.annotation.PostConstruct;
 import java.util.Date;
 
 @Component
-public class Logger {
+public class AppInfo {
     @Value("${app.name}")
     private String appName;
 
     @PostConstruct
     private void init(){
-        System.out.println(appName+" logger module init.");
+        System.out.println(appName+" AppInfo module init.");
     }
 
-    public void log(String logContent){
-        System.out.printf("%tT %s \n", new Date(), logContent);
+    public String getInfo(){
+        return String.format("time:%tT, appName:%s \n", new Date(), appName);
     }
 }

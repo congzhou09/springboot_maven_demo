@@ -1,8 +1,9 @@
 package com.congzhou.component.res;
 
 public enum ResultCodeMessage {
-    SUCCESS(0, "成功"),
-    FAIL(10001, "失败");
+    SUCCESS(0, "请求成功"),
+    INTERNAL_SERVER_ERROR(500, "Internal Server Error");
+
 
     private int code;
     private String message;
