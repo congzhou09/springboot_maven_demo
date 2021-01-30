@@ -2,14 +2,19 @@ package com.congzhou;
 
 import com.alibaba.fastjson.JSONObject;
 import com.congzhou.model.User;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
 
 @SpringBootTest
 class SpringbootMavenDemoApplicationTests {
+
+    @BeforeAll
+    public static void beforeTest(){
+        System.out.println("test is beginning");
+    }
 
     @Test
     void contextLoads() {
